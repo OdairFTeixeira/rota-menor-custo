@@ -1,11 +1,11 @@
 # Use a imagem oficial do OpenJDK como imagem base
-FROM adoptopenjdk:21-jre-hotspot
+FROM openjdk:21-jdk
 
 # Define o diretório de trabalho no contêiner
 WORKDIR /app
 
 # Copia o arquivo JAR da sua aplicação para o contêiner
-COPY target/djikstra-0.0.1.jar /app/app.jar
+COPY target/dijikstra-0.0.1.jar /app/app.jar
 
 # Expõe a porta que a aplicação Spring Boot está escutando
 EXPOSE 8080
