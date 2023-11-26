@@ -5,7 +5,7 @@ FROM openjdk:21-jdk
 WORKDIR /app
 
 # Copia o arquivo JAR da sua aplicação para o contêiner
-COPY target/dijikstra-0.0.1.jar /app/app.jar
+COPY ./dijikstra-0.0.1.jar /app/app.jar
 
 # Expõe a porta que a aplicação Spring Boot está escutando
 EXPOSE 8080
