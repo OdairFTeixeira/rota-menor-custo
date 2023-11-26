@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.rota.menor.custo</groupId>
 	<artifactId>dijikstra</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>dijikstra</name>
 	<description>university example of dijikstra</description>
 	<properties>
