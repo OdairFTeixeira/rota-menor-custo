@@ -1,5 +1,5 @@
 # Use a imagem oficial do OpenJDK como imagem base
-FROM openjdk:21-jre-slim
+FROM adoptopenjdk:21-jre-hotspot
 
 # Define o diretório de trabalho no contêiner
 WORKDIR /app
