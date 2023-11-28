@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Objects;
 
 @Getter
 @NoArgsConstructor
@@ -22,5 +24,25 @@ public class CidadeDestinoDto {
         this.origem = cidadeDestinoEntity.getOrigem();
         this.destino = cidadeDestinoEntity.getDestino();
         this.distancia = cidadeDestinoEntity.getDistancia();
+    }
+
+    public BigDecimal getTempoMedioCarro() {
+        return Objects.nonNull(distancia) ?
+                distancia.divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
+    public BigDecimal getTempoMedioMoto() {
+        return Objects.nonNull(distancia) ?
+                distancia.divide(BigDecimal.valueOf(120), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
+    public BigDecimal getTempoMedioOnibus() {
+        return Objects.nonNull(distancia) ?
+                distancia.divide(BigDecimal.valueOf(80), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
+    public BigDecimal getTempoMedioCaminhao() {
+        return Objects.nonNull(distancia) ?
+                distancia.divide(BigDecimal.valueOf(60), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
     }
 }
