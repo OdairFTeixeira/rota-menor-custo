@@ -12,8 +12,6 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class CidadeDestinoDto {
 
-    private Long id;
-
     private String origem;
 
     private String destino;
@@ -21,7 +19,6 @@ public class CidadeDestinoDto {
     private BigDecimal distancia;
 
     public CidadeDestinoDto(CidadeDestinoEntity cidadeDestinoEntity) {
-        this.id = cidadeDestinoEntity.getId();
         this.origem = cidadeDestinoEntity.getOrigem();
         this.destino = cidadeDestinoEntity.getDestino();
         this.distancia = cidadeDestinoEntity.getDistancia();

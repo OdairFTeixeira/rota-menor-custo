@@ -27,7 +27,7 @@ public class DijkstraServiceImpl implements DijkstraService {
             for (Map.Entry<String, BigDecimal> vizinho : grafo.get(cidadeAtual).entrySet()) {
                 BigDecimal novaDistancia = resultados.get(cidadeAtual).getDistanciaTotal().add(vizinho.getValue());
                 List<CidadeDestinoDto> novoCaminho = new ArrayList<>(resultados.get(cidadeAtual).getCaminho());
-                novoCaminho.add(new CidadeDestinoDto(null, cidadeAtual, vizinho.getKey(), vizinho.getValue()));
+                novoCaminho.add(new CidadeDestinoDto(cidadeAtual, vizinho.getKey(), vizinho.getValue()));
 
                 if (novaDistancia.compareTo(resultados.get(vizinho.getKey()).getDistanciaTotal()) < 0) {
                     resultados.put(vizinho.getKey(), new ResultadoDto(novaDistancia, novoCaminho));
