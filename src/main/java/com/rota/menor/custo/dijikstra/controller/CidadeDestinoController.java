@@ -20,7 +20,7 @@ public class CidadeDestinoController {
         return cidadeDestinoService.buscarDistanciasCidades();
     }
 
-    @PostMapping("rota-menor-custo")
+    @GetMapping("rota-menor-custo")
     public ResultadoDto buscarRotaMenorCusto(@RequestParam String origem, @RequestParam String destino) {
         return cidadeDestinoService.buscarRotaMenorCusto(origem, destino);
     }
