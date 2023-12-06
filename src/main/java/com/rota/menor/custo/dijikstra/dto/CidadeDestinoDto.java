@@ -20,10 +20,13 @@ public class CidadeDestinoDto {
 
     private BigDecimal distancia;
 
+    private BigDecimal tempoPadraoDeslocamento;
+
     public CidadeDestinoDto(CidadeDestinoEntity cidadeDestinoEntity) {
         this.origem = cidadeDestinoEntity.getOrigem();
         this.destino = cidadeDestinoEntity.getDestino();
         this.distancia = cidadeDestinoEntity.getDistancia();
+        this.tempoPadraoDeslocamento = cidadeDestinoEntity.getTempoPadraoDeslocamento();
     }
 
     public BigDecimal getTempoMedioCarro() {

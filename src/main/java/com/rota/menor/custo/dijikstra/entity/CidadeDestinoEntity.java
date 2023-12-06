@@ -17,4 +17,6 @@ public class CidadeDestinoEntity {
     private String destino;
 
     private BigDecimal distancia;
+    
+    private BigDecimal tempoPadraoDeslocamento;
 }

@@ -15,7 +15,9 @@ import java.util.Objects;
 public class ResultadoDto {
 
     private BigDecimal distanciaTotal;
-    
+
+    private BigDecimal tempoTotal;
+
     private List<CidadeDestinoDto> caminho;
 
     public BigDecimal getTempoMedioCarro() {
