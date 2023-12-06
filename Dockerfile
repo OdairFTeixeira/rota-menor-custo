@@ -1,4 +1,8 @@
 FROM openjdk:21-jdk
-VOLUME /tmp
+ENV MAVEN_VERSION 3.8.4
+WORKDIR /app
+COPY . .
+RUN chmod +x /app/mvnw
+RUN ./mvnw clean install
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "dijikstra.jar"]
+CMD ["java", "-jar", "target/dijikstra.jar"]
