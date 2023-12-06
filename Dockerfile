@@ -1,5 +1,5 @@
 FROM openjdk:21-jdk
-ENV MAVEN_VERSION 3.6.3
+ENV MAVEN_VERSION 3.8.4
 WORKDIR /app
 COPY . .
 RUN chmod +x /app/mvnw
