@@ -20,6 +20,14 @@ public class ResultadoDto {
 
     private List<CidadeDestinoDto> caminho;
 
+    public CustoGasolinaViagemDto getCustoViagem() {
+        return new CustoGasolinaViagemDto(distanciaTotal);
+    }
+
+    public BigDecimal getCustoRefeicao() {
+        return BigDecimal.valueOf(70);
+    }
+
     public BigDecimal getTempoMedioCarro() {
         return Objects.nonNull(distanciaTotal) ?
                 distanciaTotal.divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;

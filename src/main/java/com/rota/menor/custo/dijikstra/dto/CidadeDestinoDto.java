@@ -44,6 +44,11 @@ public class CidadeDestinoDto {
                 distancia.divide(BigDecimal.valueOf(80), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
     }
 
+    public BigDecimal getTempoMedioMicroOnibus() {
+        return Objects.nonNull(distancia) ?
+                distancia.divide(BigDecimal.valueOf(90), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
     public BigDecimal getTempoMedioCaminhao() {
         return Objects.nonNull(distancia) ?
                 distancia.divide(BigDecimal.valueOf(60), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
