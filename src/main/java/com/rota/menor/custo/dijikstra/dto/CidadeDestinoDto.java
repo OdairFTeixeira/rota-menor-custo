@@ -22,11 +22,14 @@ public class CidadeDestinoDto {
 
     private BigDecimal tempoPadraoDeslocamento;
 
+    private Integer qtdPedagios;
+
     public CidadeDestinoDto(CidadeDestinoEntity cidadeDestinoEntity) {
         this.origem = cidadeDestinoEntity.getOrigem();
         this.destino = cidadeDestinoEntity.getDestino();
         this.distancia = cidadeDestinoEntity.getDistancia();
         this.tempoPadraoDeslocamento = cidadeDestinoEntity.getTempoPadraoDeslocamento();
+        this.qtdPedagios = cidadeDestinoEntity.getQtdPedagios();
     }
 
     public BigDecimal getTempoMedioCarro() {

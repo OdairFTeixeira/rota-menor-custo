@@ -20,8 +20,8 @@ public class ResultadoDto {
 
     private List<CidadeDestinoDto> caminho;
 
-    public CustoGasolinaViagemDto getCustoViagem() {
-        return new CustoGasolinaViagemDto(distanciaTotal);
+    public CustoPedagioViagemDto getCustoPedagiosViagem() {
+        return new CustoPedagioViagemDto(getTotalPedagios());
     }
 
     public BigDecimal getCustoRefeicao() {
@@ -46,6 +46,15 @@ public class ResultadoDto {
     public BigDecimal getTempoMedioCaminhao() {
         return Objects.nonNull(distanciaTotal) ?
                 distanciaTotal.divide(BigDecimal.valueOf(60), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
+    public BigDecimal getTempoMedioMicroOnibus() {
+        return Objects.nonNull(distanciaTotal) ?
+                distanciaTotal.divide(BigDecimal.valueOf(90), 2, RoundingMode.HALF_UP) : BigDecimal.ZERO;
+    }
+
+    public Integer getTotalPedagios() {
+        return caminho.stream().mapToInt(CidadeDestinoDto::getQtdPedagios).sum();
     }
 }
 

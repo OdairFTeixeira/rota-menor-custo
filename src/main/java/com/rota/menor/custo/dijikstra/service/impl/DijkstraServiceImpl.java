@@ -31,7 +31,7 @@ public class DijkstraServiceImpl implements DijkstraService {
 
                 if (novaDistancia.compareTo(resultados.get(vizinho.getKey()).getDistanciaTotal()) < 0) {
                     List<CidadeDestinoDto> novoCaminho = new ArrayList<>(resultados.get(cidadeAtual).getCaminho());
-                    novoCaminho.add(new CidadeDestinoDto(cidadeAtual, vizinho.getKey(), aresta.getDistancia(), aresta.getTempoPadraoDeslocamento()));
+                    novoCaminho.add(new CidadeDestinoDto(cidadeAtual, vizinho.getKey(), aresta.getDistancia(), aresta.getTempoPadraoDeslocamento(), aresta.getQtdPedagios()));
 
                     resultados.put(vizinho.getKey(), new ResultadoDto(novaDistancia, novoTempo, novoCaminho));
                     filaPrioridade.remove(vizinho.getKey());

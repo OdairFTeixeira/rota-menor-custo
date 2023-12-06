@@ -19,4 +19,6 @@ public class CidadeDestinoEntity {
     private BigDecimal distancia;
     
     private BigDecimal tempoPadraoDeslocamento;
+
+    private Integer qtdPedagios;
 }
